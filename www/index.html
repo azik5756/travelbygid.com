@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hire a guide</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+    	<ul type="none">
+    		<li><a href="#" id="sgn">SIGN IN</a><div class="left-bot"></div></li>
+    		<li><a href="#">SIGN UP</a><div class="right-bot"></div></li>
+    	</ul>
+    	<div class="search"><i class="fa fa-search"></i></div>
+    	<i class="fa fa-search" id="src"></i><input type="text" class="search-block" placeholder="Enter the city where do you want hire a guide">
+    </div>
+    <div class="clear"></div>
+    <div class="black"></div>
+    <span id="azi">Hire a guide</span><br>
+    <span id="klm">where do you want</span><br><br>
+    <span>The registration only for guide</span>
+    <div class="registr">
+      <ul type="none">
+        <li><input type="text" name="name" placeholder="The name please"></li>
+        <li><input type="text" name="username" placeholder="The username"></li>
+        <li><input type="password" name="pass" placeholder="Please enter the password"></li>
+        <li><input type="text" name="whats" placeholder="Whats-app phone"></li>
+        <li><input type="text" name="mail" placeholder="@mail or @gmail"></li>
+        <li><input type="text" name="city" placeholder="The city where do you live..."></li>
+        <li><input type="text" name="skype" placeholder="Please enter the skype"></li>
+        <li><input type="file" name="fl"><label for="fl">Photo please...</label><input type="button" value="Create an account" id="crta"></li>
+      </ul>
+    </div>
+     <div class="login">
+     <ul type="none">
+       <li><i class="fa fa-user-o" style="color:#B8D8D8;"></i><input type="text" name="username" class="riko uh" placeholder="Enter the username or @mail..."></li>
+        <li><i class="fa fa-lock" style="color:#B8D8D8;"></i><input type="text" name="passre"  class="riko uhu" placeholder="Enter the password"></li>
+        <li><a href="#" id="rmb">Forgot password?</a><input type="button" value="Sign in" id="sgni"></li>
+        </ul></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+          $('.search').click(function(){
+          	var a=$('.search-block').css("width");
+          	if(a=='0px')
+          	{
+           $('.search-block').css({"width":"270px","transition":".4s"});
+           $('.search-block').focus();
+           $('#src').css("visibility","visible");
+            }
+            else
+            {
+           $('.search-block').css({"width":"0","transition":".4s"});	
+           $('#src').css("visibility","hidden");
+            }
+          });
+          var ye=$('.registr ul li');
+          $('#sgn').click(function nation(){
+               $('.login').css({"transform":"rotateY(0deg)","transition":".8s ease-out","transition-delay":"1.3s"});
+            for(var k=0;k<9;k++)
+          {
+          $(ye[k]).css({"margin-left":"-100%","filter":"blur(2px)","opacity":"0","transition":".5s","transition-delay":"."+k+"s"});
+          }
+          });
+		});
+	</script>
+</body>
+</html>
